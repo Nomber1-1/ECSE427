@@ -45,14 +45,14 @@ void exploreDataTypes()
     char string[] = "Hello, C!"; // String literal
     int numbers[3] = {1, 2, 3};  // Integer array with 3 elements
 
-    printf("String: %s, Numbers: %d, %d, %d\n", string, numbers[0], numbers[1], numbers[2]);
+    printf("String: %s, Numbers: %d, %d, %d\n\n", string, numbers[0], numbers[1], numbers[2]);
 }
 
 // Control Structures
 // Function to demonstrate the use of control structures like if-else, switch, and loops
 void exploreControlStructures()
 {
-    printf("Control Structures\n\n");
+    printf("--Control Structures--\n\n");
 
     // Example of if-else control structure
     int age = 19;
@@ -122,7 +122,7 @@ void explorePointersAndMemory()
     int *ptr = &x; // Declare a pointer to x (stores the address of x)
 
     // Print the value of x and the value stored at the pointer (dereferenced)
-    printf("x = %d, *ptr = %d\n", x, *ptr);
+    printf("x = %d, *ptr = %d, &x = %d, &ptr = %d\n", x, *ptr, &x, &ptr);
 
     // Dynamic memory allocation using malloc() /mah-lok/
     int *dynamicArray = (int *)malloc(3 * sizeof(int)); // Allocate memory for an array of 3 integers
@@ -132,7 +132,7 @@ void explorePointersAndMemory()
         for (int i = 0; i < 3; i++)
         {
             dynamicArray[i] = i * 10; // Assign value to each element
-            printf("dynamicArray[%d] = %d\n", i, dynamicArray[i]);
+            printf("dynamicArray[%d] = %d\n\n", i, dynamicArray[i]);
         }
         free(dynamicArray); // Free the dynamically allocated memory
     }
@@ -154,15 +154,15 @@ void exploreStructsAndUnions()
 
     // Accessing each field in the struct separately
     // `person1.name` and `person1.age` each have their own memory
-    printf("Struct Example:\n");
+    printf("--Struct Example:--\n");
     printf("Person: %s, Age: %d\n", person1.name, person1.age); // Print the struct's fields
 
     // Example: Defining a union
     // In a union, all fields share the same memory, so only one field can store a value at any given time.
     union Data
     {
-        int intVal;     // Integer field
-        float floatVal; // Float field 4 bytes
+        int intVal;                // Integer field
+        float floatVal;            // Float field 4 bytes
         long double longDoubleVal; // Long double field 8 bytes
     };
 
@@ -170,7 +170,7 @@ void exploreStructsAndUnions()
 
     // Assign a value to the integer field of the union
     data.intVal = 100; // intVal now holds the value 100
-    printf("\nUnion Example (After assigning intVal):\n");
+    printf("\n--Union Example (After assigning intVal):--\n");
     printf("intVal: %d\n", data.intVal); // Print the integer value
 
     // Assign a value to the float field of the union
