@@ -9,6 +9,9 @@ void *mythread(void *arg)
     return NULL;
 }
 
+// This is a simple example of how to use pthread_join
+// pthread_join waits for the threads to finish
+
 int main(int argc, char *argv[])
 {
 
